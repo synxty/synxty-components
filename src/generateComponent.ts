@@ -2,9 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import { workspace, window } from 'vscode';
 
-import componentTemplate from './templates/component';
 import stylesTemplate from './templates/styles';
-import specTemplate from './templates/spec';
+import reactComponentTemplate from './templates/component';
+import reactSpecTemplate from './templates/spec';
+import nextComponentTemplate from './templates/next/component';
+import nextSpecTemplate from './templates/next/spec';
 
 interface componentProps {
   name: string;
@@ -15,7 +17,45 @@ interface componentProps {
   }[];
 };
 
-async function generateComponent(componentName: string, directory?: string) {
+async function generateReactComponent(componentName: string, directory?: string) {
+  const files = [
+    {
+      name: 'index.tsx',
+      content: reactComponentTemplate
+    },
+    {
+      name: 'styles.ts',
+      content: stylesTemplate
+    },
+    {
+      name: 'index.spec.tsx',
+      content: reactSpecTemplate
+    }
+  ];
+  generateComponent(componentName, files, directory);
+
+}
+
+async function generateNextComponent(componentName: string, directory?: string) {
+  const files = [
+    {
+      name: 'index.tsx',
+      content: nextComponentTemplate
+    },
+    {
+      name: 'styles.ts',
+      content: stylesTemplate
+    },
+    {
+      name: 'index.spec.tsx',
+      content: nextSpecTemplate
+    }
+  ];
+  generateComponent(componentName, files, directory);
+
+}
+
+async function generateComponent(componentName: string, files: componentProps['files'], directory?: string) {
   const name = fixComponentName(componentName);
   const projectRoot = (workspace.workspaceFolders as any)[0].uri.fsPath;
 
@@ -36,20 +76,7 @@ async function generateComponent(componentName: string, directory?: string) {
   const component = {
     name,
     path: directory + name,
-    files: [
-      {
-        name: 'index.tsx',
-        content: componentTemplate
-      },
-      {
-        name: 'styles.ts',
-        content: stylesTemplate
-      },
-      {
-        name: 'index.spec.tsx',
-        content: specTemplate
-      }
-    ]
+    files
   };
 
   makeDirectory(component.path);
@@ -113,4 +140,4 @@ async function createFiles(component: componentProps) {
 
 };
 
-export default generateComponent;
+export { generateReactComponent, generateNextComponent };

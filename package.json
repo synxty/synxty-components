@@ -1,5 +1,5 @@
 {
-  "name": "synxty-next-components",
+  "name": "synxty-components",
   "version": "0.0.1",
   "main": "./dist/extension.js",
   "license": "MIT",
@@ -12,17 +12,27 @@
     "vscode": "^1.17.0"
   },
   "activationEvents": [
+    "onCommand:extension.synxty-react-components",
     "onCommand:extension.synxty-next-components"
   ],
   "contributes": {
     "commands": [
       {
+        "command": "extension.synxty-react-components",
+        "title": "Create a React Component"
+      },
+      {
         "command": "extension.synxty-next-components",
-        "title": "Create Synxty Next Component"
+        "title": "Create a Next Component"
       }
     ],
     "menus": {
       "explorer/context": [
+        {
+          "command": "extension.synxty-react-components",
+          "group": "1_modification",
+          "when": "explorerResourceIsFolder"
+        },
         {
           "command": "extension.synxty-next-components",
           "group": "1_modification",
