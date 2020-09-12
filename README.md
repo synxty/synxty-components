@@ -1,16 +1,8 @@
-<!-- omit in toc -->
 # Synxty Components
+
 >Create your React components right from the explorer!
 
 <img src=".github/assets/banner.png" />
-
-<!-- omit in toc -->
-### Table of Contents
-
-- [👉🏼 About](#-about)
-- [📃 Installation](#-installation)
-- [🎨 Creating a Component](#-creating-a-component)
-- [⚖️ License](#️-license)
 
 ## 👉🏼 About
 
