@@ -36,10 +36,10 @@ async function handleGenerateNextComponent(args: Uri) {
 
 function activate(context: ExtensionContext) {
   let disposable = [
-    commands.registerCommand("extension.synxty-next-components", args => {
+    commands.registerCommand("extension.synxty-next-component", args => {
       handleGenerateNextComponent(args);
     }),
-    commands.registerCommand("extension.synxty-react-components", args => {
+    commands.registerCommand("extension.synxty-react-component", args => {
       handleGenerateReactComponent(args);
     })
   ];

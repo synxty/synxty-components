@@ -24,7 +24,8 @@
     "jest",
     "ts",
     "components",
-    "styled"
+    "styled",
+    "functional"
   ],
   "categories": [
     "Programming Languages",
@@ -39,29 +40,29 @@
     "vscode": "^1.17.0"
   },
   "activationEvents": [
-    "onCommand:extension.synxty-react-components",
-    "onCommand:extension.synxty-next-components"
+    "onCommand:extension.synxty-react-component",
+    "onCommand:extension.synxty-next-component"
   ],
   "contributes": {
     "commands": [
       {
-        "command": "extension.synxty-react-components",
+        "command": "extension.synxty-react-component",
         "title": "Create a React Component"
       },
       {
-        "command": "extension.synxty-next-components",
+        "command": "extension.synxty-next-component",
         "title": "Create a Next Component"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "extension.synxty-react-components",
+          "command": "extension.synxty-react-component",
           "group": "1_modification",
           "when": "explorerResourceIsFolder"
         },
         {
-          "command": "extension.synxty-next-components",
+          "command": "extension.synxty-next-component",
           "group": "1_modification",
           "when": "explorerResourceIsFolder"
         }
