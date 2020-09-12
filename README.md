@@ -2,7 +2,7 @@
 
 >Create your React components right from the explorer!
 
-<img src=".github/assets/banner.png" />
+![banner](.github/assets/banner.png)
 
 ## 👉🏼 About
 
@@ -27,11 +27,11 @@ This extension goes along with the [Create Synxty App](https://www.npmjs.com/pac
 
 ## 🎨 Creating a Component
 
-1. Inside your react application directory, right click the folder where you want to create your component, like this: <img src=".github/assets/csPreview1.gif" />
+1. Inside your react application directory, right click the folder where you want to create your component, like this: ![preview-1](.github/assets/csPreview1.gif)
 
-2. Then, give your component a name. What you type is going to be trimmed, capitalized and spaces will be removed. <img src=".github/assets/csPreview2.gif" />
+2. Then, give your component a name. What you type is going to be trimmed, capitalized and spaces will be removed. ![preview-2](.github/assets/csPreview2.gif)
 
-3. And just like that your react component is created with a spec and a style file to go with it! <img src=".github/assets/csPreview3.gif" />
+3. And just like that your react component is created with a spec and a style file to go with it! ![preview-3](.github/assets/csPreview3.gif)
 
 **Notes:**
 
